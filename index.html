@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080e1c">
+  <meta name="description" content="Pick your fighter. Dodge the goo. Challenge a bot or a friend in Fighting X, a free browser arena game.">
+  <title>Fighting X · Enter the arena</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/peerjs-1.5.5.min.js"></script>
+  <script type="module" src="game.js"></script>
+</head>
+<body>
+  <main id="arena" aria-label="Fighting X game">
+    <canvas id="game" aria-label="Arena. Move with WASD or arrows. Hold Space to fire. Escape pauses bot matches."></canvas>
+    <header id="topbar">
+      <button id="home" class="wordmark" aria-label="Fighting X home">FIGHTING <span>X</span></button>
+      <div id="wallet" aria-label="Your progress"></div>
+      <div class="tools">
+        <button id="sound" class="icon-button" aria-label="Enable sound" title="Toggle sound">♪</button>
+        <button id="pause" class="icon-button" aria-label="Pause game" hidden>Ⅱ</button>
+        <button id="settings" class="icon-button" aria-label="Settings" title="Settings">⚙</button>
+      </div>
+    </header>
+    <div id="match-hud" hidden><div id="opponent-health"></div><div id="connection-status"></div><div id="player-health"></div></div>
+    <section id="overlay" aria-label="Game menus"><div id="panel"></div></section>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <noscript>This game needs JavaScript enabled in your browser.</noscript>
+  </main>
+</body>
+</html>
